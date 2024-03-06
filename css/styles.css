@@ -1,0 +1,371 @@
+:root {
+    --fuentePrincipal: 'Raleway', sans-serif;
+    --colorPrimario: #444442 ;
+    --black: #000;
+    --white: #fff;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+
+body {
+    background-color: var(--colorPrimario);
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url(../decorationimages/badboys4.jpg);
+        background-repeat: repeat;
+        background-size: cover;
+    }
+}
+
+.container {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h5, h6 {
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2 {
+   font-size: 3rem; 
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2.2rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.8rem;
+}
+
+
+p {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+/* Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+/* Main Page */
+
+.container__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header__main {
+    display: flex;
+    margin: 3rem 0;
+    justify-content: center;
+    align-items: center; 
+}
+
+.navigation__main {
+    display: flex;
+    margin: 3rem 0;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.a__main {
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+}
+
+.a__main:hover {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.header__main--a:hover {
+    color: var(--white);
+}
+
+/* Main Gallery Page */
+
+/* So I am thinking of having three galleries per page. 
+    I think that this would just make it a little bit easier to maintain and just idk, better? */
+
+
+.location {
+    background-color: var(--colorPrimario);
+    border-radius: 10%;
+    margin: 5rem;
+    padding: 1rem;
+}
+
+.location__image,
+.photocontainer__image {
+    max-width: 80%;
+    margin: 2rem auto;
+    display: block;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+.location__title {
+    text-align: center;
+    color: var(--white);
+}
+
+/* Paginacion */
+
+.paginacion {
+	display: grid;
+    grid-template-areas: "izquierda derecha";
+}
+
+/* .paginacion {
+	width: 100%;
+	margin-bottom: 30px;
+	overflow: hidden;
+} */
+
+.paginacion a{
+	display: inline-block;
+	padding: 15px 20px;
+	border-radius: 50px;
+	border:1px solid rgba(255,255,255,.2);
+	-webkit-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+    background-color: var(--colorPrimario);
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.paginacion a:hover {
+	border:2.5px solid #fff;
+	text-decoration: none;
+    font-weight: bold;
+}
+
+.paginacion__left {
+    grid-column: 1/2;
+    margin-right: 70%;
+}
+
+.paginacion__right {
+    grid-column: 2/3;
+    margin-left: 70%;
+}
+
+/* PHILOSOPHY.PHP and ABOUT.PHP and ERROR.PHP*/
+
+.dispbox {
+    width: auto;
+    max-width: 70rem;
+    margin: 5rem auto;
+    border-radius: 2rem;
+    background-color: var(--colorPrimario);
+}
+
+.dispbox__container {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dispbox__title {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.dispbox__text {
+    color: var(--white);
+    line-height: 2.8rem;
+}
+
+/* Single Photo */
+
+.photocontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.photocontainer__info {
+    background-color: var(--colorPrimario);
+    margin: 4rem;
+    padding: 4rem;
+    border-radius: 2rem;
+}
+
+.photocontainer__title {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.photocontainer__text {
+    color: var(--white);
+    line-height: 2.8rem;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+}
+
+.back-button {
+    background-color: var(--colorPrimario); /* Green */
+    border: none;
+    color: white;
+    margin: 2rem 0;
+    padding: 0 10rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 1rem;
+}
+
+.back__secondary {
+    display: flex;
+    justify-content: left;
+}
+
+.back-button__secondary {
+    background-color: var(--colorPrimario); /* Green */
+    font-family: var(--fuentePrincipal);
+    border: none;
+    color: white;
+    margin: 0;
+    padding: 0.1rem 5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+}
+
+
+/* REGISTER.PHP */
+
+
+.logback__secondary {
+    display: flex;
+    justify-content: left;
+}
+
+.logback-button__secondary {
+    background-color: var(--colorPrimario); /* Green */
+    font-family: var(--fuentePrincipal);
+    border: none;
+    color: white;
+    margin: 4rem 4rem;
+    padding: 0.1rem 5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+}
+
+.register__title {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.register__form {
+    max-width: 50rem;
+    width: 100%;
+    background-color: var(--colorPrimario);
+    border-radius: 1rem;
+}
+
+.register__form--group {
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.register__form input[type="text"],
+.register__form input[type="password"] {
+    padding: 15px;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 18px;
+    line-height: 18px;
+    border: none;
+    vertical-align: top;
+    border-radius: 1rem;
+}
+
+.register__form input[type="submit"] {
+    background-color: var(--white); /* Green */
+    border: none;
+    color: var(--black);
+    font-family: var(--fuentePrincipal);
+    margin: 2rem 0;
+    padding: 1rem 10rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 1rem;
+}
+
+.register__text a {
+    color: var(--white);
+}
+
+.register__text a:hover {
+    font-weight: bold;
+}
+
+.register__form input[type="submit"]:hover {
+    font-weight: bold;
+}
